@@ -11,7 +11,7 @@ window.CONFIG = {
 
   // Ubicaciones para calcular la distancia y mostrar la hora de cada uno
   me:  { city: "Santo Domingo", lat: 18.4861, lon: -69.9312, tz: "America/Santo_Domingo" },
-  her: { city: "Milan",          lat: 45.46427, lon: 9.18951,  tz: "Europe/Milan" },
+  her: { city: "Milan",          lat: 45.46427, lon: 9.18951,  tz: "Europe/Rome" },
 
   // ---------------- MÚSICA ----------------
   // Opción A (recomendada para repo público): el ID del video de YouTube.
