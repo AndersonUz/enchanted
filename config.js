@@ -3,15 +3,15 @@
 //  No necesitas tocar index.html, style.css ni script.js.
 // =====================================================================
 window.CONFIG = {
-  herName: "Giulia",          // <- su nombre
+  herName: "Greta",          // <- su nombre
   hisName: "Anderson",
 
   // Fecha en que se conocieron (AAAA-MM-DD) — para el contador de días
-  dateMet: "2026-01-01",
+  dateMet: "2026-11-10",
 
   // Ubicaciones para calcular la distancia y mostrar la hora de cada uno
   me:  { city: "Santo Domingo", lat: 18.4861, lon: -69.9312, tz: "America/Santo_Domingo" },
-  her: { city: "Roma",          lat: 41.9028, lon: 12.4964,  tz: "Europe/Rome" },
+  her: { city: "Milan",          lat: 45.46427, lon: 9.18951,  tz: "Europe/Milan" },
 
   // ---------------- MÚSICA ----------------
   // Opción A (recomendada para repo público): el ID del video de YouTube.
@@ -19,10 +19,10 @@ window.CONFIG = {
   // Opción B: un mp3 tuyo dentro del repo, ej. "music/enchanted.mp3"
   //   (si llenas audioFile, tiene prioridad sobre YouTube)
   music: {
-    youtubeId: "",
+    youtubeId: "igIfiqqVHtA",
     audioFile: "",
-    startAt: 0,              // segundo en que empieza (ej. 60 para arrancar en el coro)
-    volume: 70               // 0–100
+    startAt: 160,              // segundo en que empieza (ej. 60 para arrancar en el coro)
+    volume:50               // 0–100
   },
 
   // ---------------- TEXTOS ----------------
@@ -45,7 +45,7 @@ window.CONFIG = {
 
   // ✍️ Escribe aquí tú mismo la frase de la canción que él le dice en la puerta.
   // Si la dejas vacía, simplemente no aparece.
-  songQuote: "",
+  songQuote: "Hey, It was enchanting to meet you",
 
   greetingEnd: "And I'd knock again. Every single night.",
 
@@ -55,7 +55,7 @@ window.CONFIG = {
   pages: [
     {
       title: "Chapter one",
-      text: "Every story starts with a small, brave thing. Ours started with a hello I almost didn't send."
+      text: "Every story starts with a small, brave thing. Ours started with a Alessia presenting us hahaha."
     },
     {
       title: "The distance",
@@ -72,7 +72,7 @@ window.CONFIG = {
     title: "Still on the first page",
     text: "Ours is a story that has barely begun — and I don't want to skip to the end. I want every page in between.",
     // ✍️ Segunda frase de la canción (opcional), la escribes tú
-    songQuote: "",
+    songQuote: "This is just the very first page of us and not where the storyline ends",
     signature: "— to be continued…"
   },
 
