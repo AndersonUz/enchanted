@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>✨ knock knock</title>
+  <meta name="description" content="Someone is at your door…">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚪</text></svg>">
+</head>
+<body>
+  <canvas id="sky"></canvas>
+  <div id="fireflies"></div>
+  <div id="hearts"></div>
+
+  <button id="muteBtn" class="mute hidden" aria-label="Sound">♪</button>
+
+  <!-- 1. Intro -->
+  <section id="intro" class="scene active">
+    <p class="eyebrow" id="introEyebrow"></p>
+    <h1 class="script" id="introTitle"></h1>
+    <button class="btn" id="startBtn"><span id="startLabel"></span></button>
+    <p class="hint" id="introHint"></p>
+  </section>
+
+  <!-- 2. Puerta -->
+  <section id="doorScene" class="scene">
+    <div class="bubble" id="bubble"><p id="bubbleText"></p></div>
+
+    <div class="stage">
+      <div class="frame" id="frame">
+        <div class="outside">
+          <div class="moon"></div>
+          <div class="boy" id="boy">
+            <svg viewBox="0 0 100 200" aria-hidden="true">
+              <defs>
+                <radialGradient id="roseG" cx="40%" cy="35%">
+                  <stop offset="0%" stop-color="#ff9fb6"/>
+                  <stop offset="100%" stop-color="#c9264f"/>
+                </radialGradient>
+              </defs>
+              <g class="body" fill="#1b1330">
+                <!-- pelo + cabeza -->
+                <circle cx="50" cy="40" r="15"/>
+                <path d="M35 37 Q36 22 50 22 Q66 21 66 36 Q60 29 50 30 Q41 30 35 37Z"/>
+                <!-- cuello + torso + piernas -->
+                <rect x="45" y="52" width="10" height="10" rx="3"/>
+                <path d="M28 80 Q30 64 50 62 Q70 64 72 80 L74 132 L65 132 L63 196 L53 196 L50 142 L47 196 L37 196 L35 132 L26 132 Z"/>
+                <!-- zapatos -->
+                <ellipse cx="42" cy="197" rx="8" ry="3"/>
+                <ellipse cx="58" cy="197" rx="8" ry="3"/>
+              </g>
+              <!-- brazo izquierdo -->
+              <path class="arm" d="M31 82 Q22 108 28 130" stroke="#1b1330" stroke-width="8" fill="none" stroke-linecap="round"/>
+              <!-- brazo derecho sosteniendo la rosa -->
+              <path class="arm" d="M69 82 Q80 104 60 116" stroke="#1b1330" stroke-width="8" fill="none" stroke-linecap="round"/>
+              <!-- rosa -->
+              <g class="rose">
+                <path d="M60 118 Q63 104 68 90" stroke="#3f7a4a" stroke-width="2" fill="none"/>
+                <path d="M64 104 Q71 100 72 106 Q67 108 64 104Z" fill="#4f9a5c"/>
+                <circle cx="68" cy="87" r="6" fill="url(#roseG)"/>
+                <path d="M64 86 Q68 80 72 86 Q68 84 64 86Z" fill="#a51d42" opacity=".7"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <div class="door" id="door">
+          <div class="panel p1"></div>
+          <div class="panel p2"></div>
+          <div class="knob"></div>
+          <div class="door-back"></div>
+        </div>
+        <div class="under-light"></div>
+        <div class="knock-text" id="knockText"></div>
+      </div>
+      <div class="spill"></div>
+    </div>
+
+    <div class="actions">
+      <button class="btn hidden-soft" id="openBtn"></button>
+      <button class="btn hidden-soft" id="nextBtn"></button>
+    </div>
+  </section>
+
+  <!-- 3. Librito -->
+  <section id="bookScene" class="scene">
+    <div class="book">
+      <div class="page" id="page">
+        <span class="page-num" id="pageNum"></span>
+        <h2 class="script" id="pageTitle"></h2>
+        <p class="page-text" id="pageText"></p>
+        <div id="pageExtra"></div>
+      </div>
+    </div>
+    <div class="book-nav">
+      <button class="btn ghost" id="prevPage" aria-label="Previous">←</button>
+      <span class="dots" id="dots"></span>
+      <button class="btn ghost" id="nextPage" aria-label="Next">→</button>
+    </div>
+  </section>
+
+  <div id="ytWrap"><div id="player"></div></div>
+  <audio id="audio" loop preload="auto"></audio>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
