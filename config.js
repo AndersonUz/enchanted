@@ -21,8 +21,8 @@ window.CONFIG = {
   music: {
     youtubeId: "igIfiqqVHtA",
     audioFile: "",
-    startAt: 160,              // segundo en que empieza (ej. 60 para arrancar en el coro)
-    volume:50               // 0–100
+    startAt: 140,              // segundo en que empieza (ej. 60 para arrancar en el coro)
+    volume:40              // 0–100
   },
 
   // ---------------- TEXTOS ----------------
